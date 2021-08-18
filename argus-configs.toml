@@ -1,5 +1,5 @@
 # array of regular expression strings to match workflow names
 # which should be watched by bot
 workflowWithTests = [
-  '.*test.*', # all workflows with sub-string "test" in their names will be watched by bot
+  '.*cypress.*', # all workflows with sub-string "cypress" in their names will be watched by bot
 ]
