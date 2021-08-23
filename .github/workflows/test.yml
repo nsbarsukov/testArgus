@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Screenshot tests all packages of Taiga UI
 
 on:
   pull_request:
