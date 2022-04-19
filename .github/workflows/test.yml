@@ -13,11 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Run screenshot tests
+      - name: BUTTONS
         uses: cypress-io/github-action@v2
         with:
           start: npm run serve
-          command: npm run test
+          command: npm run test:buttons:ci
 
       - name: Upload artifact
         uses: actions/upload-artifact@v1
@@ -26,3 +26,22 @@ jobs:
           name: cypress-screenshots
           path: tests/cypress/snapshots
           retention-days: 7
+  cy-tests-2:
+      runs-on: ubuntu-20.04
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
+        - name: BADGES
+          uses: cypress-io/github-action@v2
+          with:
+            start: npm run serve
+            command: npm run test:badges:ci
+
+        - name: Upload artifact
+          uses: actions/upload-artifact@v1
+          if: failure()
+          with:
+            name: cypress-screenshots
+            path: tests/cypress/snapshots
+            retention-days: 7

@@ -6,7 +6,11 @@
   "scripts": {
     "serve": "serve public -p 8000",
     "test": "cypress run --env ci=true --browser chrome --headless --project tests/",
-    "test:ci": "start-server-and-test 'serve' 8000 'npm run test -- run --record --key $CYPRESS_recordKey'"
+    "test:buttons": "cypress run --env ci=true --browser chrome --headless --project tests/ --spec tests/cypress/integration/buttons.js",
+    "test:badges": "cypress run --env ci=true --browser chrome --headless --project tests/ --spec tests/cypress/integration/badges.js",
+    "test:ci": "start-server-and-test 'serve' 8000 'npm run test -- run --record --key $CYPRESS_recordKey'",
+    "test:buttons:ci": "start-server-and-test 'serve' 8000 'npm run test:buttons'",
+    "test:badges:ci": "start-server-and-test 'serve' 8000 'npm run test:badges'"
   },
   "keywords": [
     "cypress",
@@ -19,5 +23,10 @@
     "cypress-image-snapshot": "^3.1.1",
     "serve": "^11.3.2",
     "start-server-and-test": "^1.11.2"
+  },
+  "engines": {
+    "node": ">= 14",
+    "npm": ">= 7",
+    "yarn": "Please use npm instead of yarn to install dependencies"
   }
 }
