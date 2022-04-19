@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v1
         if: failure()
         with:
-          name: cypress-screenshots
+          name: buttons-screenshots
           path: tests/cypress/snapshots
           retention-days: 7
   cy-tests-2:
@@ -42,6 +42,6 @@ jobs:
           uses: actions/upload-artifact@v1
           if: failure()
           with:
-            name: cypress-screenshots
+            name: badges-screenshots
             path: tests/cypress/snapshots
             retention-days: 7
