@@ -24,7 +24,7 @@ jobs:
         if: failure()
         with:
           name: buttons-screenshots
-          path: tests/cypress/snapshots
+          path: tests/cypress/snapshots/button.js
           retention-days: 7
   cy-tests-2:
       runs-on: ubuntu-20.04
@@ -43,5 +43,5 @@ jobs:
           if: failure()
           with:
             name: badges-screenshots
-            path: tests/cypress/snapshots
+            path: tests/cypress/snapshots/badges.js
             retention-days: 7
