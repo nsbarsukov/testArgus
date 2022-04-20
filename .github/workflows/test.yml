@@ -7,7 +7,7 @@ on:
       - '!master'
 
 jobs:
-  cy-tests:
+  cy-button-tests:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -26,7 +26,7 @@ jobs:
           name: buttons-screenshots
           path: tests/cypress/snapshots/buttons.js
           retention-days: 7
-  cy-tests-2:
+  cy-badge-tests:
       runs-on: ubuntu-20.04
       steps:
         - name: Checkout
