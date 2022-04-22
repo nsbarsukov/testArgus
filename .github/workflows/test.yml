@@ -7,7 +7,7 @@ on:
       - '!master'
 
 jobs:
-  cy-tests:
+  cy-button-tests:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -23,10 +23,10 @@ jobs:
         uses: actions/upload-artifact@v1
         if: failure()
         with:
-          name: cypress-screenshots
-          path: tests/cypress/snapshots
+          name: buttons-screenshots
+          path: tests/cypress/snapshots/buttons.js
           retention-days: 7
-  cy-tests-2:
+  cy-badge-tests:
       runs-on: ubuntu-20.04
       steps:
         - name: Checkout
@@ -42,6 +42,6 @@ jobs:
           uses: actions/upload-artifact@v1
           if: failure()
           with:
-            name: cypress-screenshots
-            path: tests/cypress/snapshots
+            name: badges-screenshots
+            path: tests/cypress/snapshots/badges.js
             retention-days: 7

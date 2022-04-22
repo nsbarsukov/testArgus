@@ -5,7 +5,7 @@ describe('Buttons', () => {
     cy.get('.cypress-wrapper').each((element, index) => {
       const name = `button-${index}`;
 
-      cy.wrap(element).matchImageSnapshot(name);
+      cy.get('body').matchImageSnapshot(name);
     });
   });
 });
