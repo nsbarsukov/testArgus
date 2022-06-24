@@ -1,4 +1,4 @@
-name: Screenshot tests all packages of Taiga UI
+name: Custom label newDirectory for my testik!
 
 on:
   pull_request:
