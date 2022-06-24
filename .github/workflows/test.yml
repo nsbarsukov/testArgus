@@ -1,4 +1,4 @@
-name: Custom label newUpdates for my testik!
+name: Custom label newDirectory for my testik!
 
 on:
   pull_request:
